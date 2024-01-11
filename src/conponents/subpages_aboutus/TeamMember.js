@@ -4,7 +4,9 @@ const TeamMember = () => {
     // 团队成员内容
     return <div>
         <>
-            <h2 id="content-header" className="justify-center text-4xl font-bold">
+            <br></br>
+            <br></br>
+            <h2 id="content-header" className="justify-center text-4xl font-bold leading-10 pb-4">
                 Meet Our Team: The Diverse Pillars of Bright Future
             </h2>
             <h4 id="content-bheader" className="justify-center text-2xl font-medium">

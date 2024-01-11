@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import HomePage from './conponents/HomePage';
 import Admission from './conponents/Admission';
 import Results from "./conponents/Results";
 import Aboutus from "./conponents/Aboutus";
+import OverallContent from './conponents/subpages_aboutus/OverallContent';
+import OurGoal from './conponents/subpages_aboutus/OurGoal';
+import TeamMember from "./conponents/subpages_aboutus/TeamMember";
+import FAQ from "./conponents/FAQ";
+import Donate from "./conponents/Donate";
 import './conponents/css/style.css';
 
 
 function App() {
-    // 定义一个函数来动态生成类名
-    const getNavLinkClass = ({ isActive }) => (
-        isActive ? "underline text-sky-500 underline-offset-16" : "hover:text-sky-500"
-    );
-
     return (
         <Router>
             <div>
@@ -157,7 +157,13 @@ function App() {
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/admission" element={<Admission/>}/>
                     <Route path="/results" element={<Results/>}/>
-                    <Route path="/aboutus" element={<Aboutus/>}/>
+                    <Route path="/aboutus" element={<Aboutus/>}>
+                        <Route path="overall" element={<OverallContent/>}/>
+                        <Route path="goal" element={<OurGoal/>}/>
+                        <Route path="teamMember" element={<TeamMember/>}/>
+                    </Route>
+                    <Route path="/faq" element={<FAQ/>}/>
+                    <Route path="/donate" element={<Donate/>}/>
                 </Routes>
             </div>
         </Router>

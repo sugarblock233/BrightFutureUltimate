@@ -4,8 +4,9 @@ const Goal = () => {
     // 目标内容
     return <div>
         <>
-
-            <h2 id="content-header" className="justify-center text-4xl font-bold">
+            <br></br>
+            <br></br>
+            <h2 id="content-header" className="justify-center text-4xl font-bold pb-4">
                 Our Goal
             </h2>
             <h4 id="content-bheader" className="justify-center text-2xl font-medium">

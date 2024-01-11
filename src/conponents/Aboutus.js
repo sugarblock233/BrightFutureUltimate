@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/style.css';
-import { Routes, Route, Link, Outlet } from 'react-router-dom';
+import { Routes, Route, Link} from 'react-router-dom';
 import OverallContent from './subpages_aboutus/OverallContent';
 import OurGoal from './subpages_aboutus/OurGoal';
 import TeamMember from "./subpages_aboutus/TeamMember";
@@ -33,10 +33,11 @@ function Aboutus() {
                         rel="stylesheet"
                         type="text/css"
                     />
-                    <div className="font-serif flex flex-row justify-center sidebar">
+                    <div className="flex flex-row justify-center sidebar">
                         <div className="flex flex-col basis-1/4 flex-grow-0 align-middle text-gray-700">
                             <div
                                 className="fixed pt-4 px-8 mx-4 mt-2 w-fit max-h-160 shadow-inner shadow-sky-100 overflow-y-auto 2xl:max-h-256">
+                                <br></br>
                                 <h2 className="text-3xl font-semibold pb-2">Main</h2>
                                 <ul className="space-y-2 list-inside list-image-none text-xl">
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
@@ -101,7 +102,6 @@ function Aboutus() {
                                 <Route path="goal" element={<OurGoal/>}/>
                                 <Route path="teamMember" element={<TeamMember/>}/>
                             </Routes>
-                            <Outlet />
 
                             <br/>
                             <br/>
