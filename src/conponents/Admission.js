@@ -2,8 +2,11 @@ import React from 'react';
 import './css/style.css';
 import logo from './images/BrightFutureLogo05.png';
 import backgroundImage from "./images/background_image (3).png";
+import {useTranslation} from "react-i18next";
 
 function Admission() {
+    const { t} = useTranslation();
+
     return (
         <>
             <meta charSet="UTF-8" />
@@ -29,8 +32,7 @@ function Admission() {
                     <section className="pb-8 mt-10 md:mt-20">
                         <div className="w-full mt-10 md:w-4/5 md:mr-4 md:mt-0">
                             <h1 className="text-4xl font-bold leading-none text-center text-gray-900 md:text-left heading">
-                                Nurturing Academic Excellence and Transformative Opportunities in
-                                Higher Education for Aspiring Students Worldwide
+                                {t('ADMTITLE01')}
                             </h1>
                             <div className="mt-4 leading-loose content">
                                 <p className="text-lg">

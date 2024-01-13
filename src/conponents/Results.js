@@ -11,8 +11,11 @@ import usst_light_blue from "./images/icons/usst_light_blue.png";
 import princeton from "./images/icons/princeton.png";
 import matej from "./images/matej.jpg";
 import olena from "./images/olena.JPG";
+import {useTranslation} from "react-i18next";
 
 function Results() {
+    const { t} = useTranslation();
+
     return (
         <>
             <meta charSet="UTF-8" />
@@ -39,27 +42,11 @@ function Results() {
                     <section className="pb-8 mt-10 md:mt-20">
                         <div className="w-full mt-10 md:w-4/5 md:mr-4 md:mt-0">
                             <h1 className="text-4xl font-bold leading-none text-center text-gray-900 md:text-left heading">
-                                Empowering Students and Building Partnerships for Higher Education
-                                Success
+                                {t('RESTITLE01')}
                             </h1>
                             <div className="mt-4 leading-loose content">
                                 <p className="text-lg">
-                                    In the last six years, Bright Futures has been a transformative
-                                    force, empowering 300 students from disadvantaged backgrounds to
-                                    secure admission to prestigious German universities, with over
-                                    $70,000,000 awarded in full scholarships. Operating globally, our
-                                    outreach has expanded exponentially, connecting with 1,200+
-                                    prospective students and addressing socio-economic challenges,
-                                    supporting 30% from underserved regions. Our Academic,
-                                    Scholarship, and Mentorship teams play pivotal roles in fostering
-                                    a supportive community. By building strategic partnerships with
-                                    renowned universities in Germany, we ensure our students receive
-                                    the guidance needed to navigate the complexities of the
-                                    application process. Bright Futures has also forged collaborations
-                                    with 30+ German-based employers, providing valuable 12-week summer
-                                    internships for our scholars. This practical exposure not only
-                                    enriches their educational journey but equips them with real-world
-                                    skills, enhancing their overall employability.
+                                    {t('RESTEXT01')}
                                 </p>
                             </div>
                         </div>
@@ -67,7 +54,7 @@ function Results() {
                         <br />
                         <hr />
                         <br />
-                        <h2 className="text-blue-500 text-3xl font-bold">Our Partners</h2>
+                        <h2 className="text-blue-500 text-3xl font-bold">{t('OURPARTNERS')}</h2>
                         {/*               add some partners' logos here*/}
                         <div className="grid grid-cols-4 gap-2">
                             <img
@@ -89,21 +76,11 @@ function Results() {
                         <hr />
                         <br />
                         <br />
-                        <h3 className="text-blue-600 text-2xl font-bold">Commitment</h3>
+                        <h3 className="text-blue-600 text-2xl font-bold">{t('COMMITMENT')}</h3>
                         <br />
                         <div>
                             <p className="text-lg leading-7">
-                                Our dedication to fostering inclusivity is evident in our deliberate
-                                expansion of sponsorships. Originally supporting 20 students
-                                annually, we have now extended our reach to 80 individuals. This
-                                purposeful growth underscores our unwavering commitment to
-                                cultivating a substantial community of well-educated individuals
-                                ready to make impactful contributions to society. Our commitment
-                                extends beyond university admissions. Bright Futures actively
-                                supports and encourages our graduates in building their
-                                entrepreneurial ventures, creating a ripple effect of positive
-                                change in communities around the world. Join us in shaping a
-                                brighter future for generations to come.
+                                {t('RESTEXT02')}
                             </p>
                         </div>
                         <br />
@@ -114,7 +91,7 @@ function Results() {
                         <div>
                             <div>
                                 <h3 className="text-blue-600 text-2xl font-bold">
-                                    Inspiring Transformations at Bright Futures
+                                    {t('RESTITLE03')}
                                 </h3>
                                 <br />
                                 <div className="flex flex-col">
@@ -130,29 +107,12 @@ function Results() {
                                             </div>
                                             <div className="basis-3/4 flex flex-col">
                                                 <p className="text-gray-600 text-xs">
-                                                    Donetsk, Donetsk oblast, Poland
+                                                    {t('LOCATION01')}
                                                 </p>
                                                 <p className="text-xl mb-1 font-bold">Matej</p>
                                                 <div className="relative">
                                                     <p className="line-clamp-3 group-hover:line-clamp-none">
-                                                        Matej, a determined dreamer from Poland, aspired to
-                                                        study Computer Science but faced financial barriers.
-                                                        Upon discovering Bright Futures, his life took a
-                                                        remarkable turn. Guided by our dedicated teams, Matej
-                                                        not only honed his language skills but also crafted an
-                                                        exceptional application. His perseverance paid off when
-                                                        he secured admission to the Technical University of
-                                                        Munich on a full scholarship. Matej's journey
-                                                        transcended academics; it was a transformative
-                                                        experience. Fueled by his passion, he not only excelled
-                                                        in his studies but also leveraged the opportunities at
-                                                        TU Munich to secure a compelling job at a renowned tech
-                                                        company in Germany. The scholarship not only covered his
-                                                        tuition but provided a stipend for living expenses,
-                                                        removing the burden of financial constraints. Today,
-                                                        Matej stands as a testament to the life-changing impact
-                                                        of Bright Futures, contributing to groundbreaking
-                                                        innovations in the tech industry.
+                                                        {t('RESDESCRIPTION01')}
                                                     </p>
                                                 </div>
                                             </div>
@@ -173,26 +133,12 @@ function Results() {
                                             </div>
                                             <div className="basis-3/4 flex flex-col">
                                                 <p className="text-gray-600 text-xs">
-                                                    Ivano-Frankivsk, Ukrainian
+                                                    {t('LOCATION02')}
                                                 </p>
                                                 <p className="text-xl mb-1 font-bold">Olena</p>
                                                 <div className="relative">
                                                     <p className="line-clamp-3 group-hover:line-clamp-none">
-                                                        Olena, hailing from a small Ukrainian town, aspired to
-                                                        make a difference through Environmental Engineering.
-                                                        Hindered by financial limitations, her dreams found a
-                                                        path through Bright Futures. With personalized support,
-                                                        Olena enhanced her language proficiency, navigated the
-                                                        intricacies of application processes, and secured a full
-                                                        scholarship at RWTH Aachen University. Her journey at
-                                                        RWTH Aachen not only equipped her with technical
-                                                        expertise but also fueled her passion for sustainable
-                                                        solutions. The scholarship not only covered tuition but
-                                                        facilitated her pursuit of a Ph.D. in Environmental
-                                                        Engineering. Olena's success story exemplifies the
-                                                        broader impact of Bright Futures, not only transforming
-                                                        individual lives but fostering contributions to
-                                                        cutting-edge research and environmental solutions.
+                                                        {t('RESDESCRIPTION02')}
                                                     </p>
                                                 </div>
                                             </div>

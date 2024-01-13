@@ -10,9 +10,12 @@ import TeamMember from "./conponents/subpages_aboutus/TeamMember";
 import FAQ from "./conponents/FAQ";
 import Donate from "./conponents/Donate";
 import './conponents/css/style.css';
+import { useTranslation } from 'react-i18next';
 
 
 function App() {
+    const { t , i18n} = useTranslation();
+
     return (
         <Router>
             <div>
@@ -41,7 +44,7 @@ function App() {
                             >
                                 {({ isActive }) => (
                                     <>
-                                        HOME
+                                        {t('HOME')}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -56,7 +59,7 @@ function App() {
                             >
                                 {({ isActive }) => (
                                     <>
-                                        ABOUT US
+                                        {t('ABOUTUS')}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -71,7 +74,7 @@ function App() {
                             >
                                 {({ isActive }) => (
                                     <>
-                                        RESULTS
+                                        {t('RESULTS')}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -86,7 +89,7 @@ function App() {
                             >
                                 {({ isActive }) => (
                                     <>
-                                        ADMISSION
+                                        {t('ADMISSION')}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -101,7 +104,7 @@ function App() {
                             >
                                 {({ isActive }) => (
                                     <>
-                                        DONATE
+                                        {t('DONATE')}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -116,7 +119,7 @@ function App() {
                             >
                                 {({ isActive }) => (
                                     <>
-                                        FAQ
+                                        {t('FAQ')}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -140,10 +143,10 @@ function App() {
                                     </svg>
                                 </button>
                                 <div className="hidden absolute group-hover:block min-w-max top-12">
-                                    <ul className="bg-white shadow-lg rounded-md">
-                                        <li className="p-2 hover:bg-gray-100">English</li>
-                                        <li className="p-2 hover:bg-gray-100">Deutsch</li>
-                                        <li className="p-2 hover:bg-gray-100">中文</li>
+                                    <ul className="bg-white shadow-lg rounded-md flex flex-col">
+                                        <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('en')}>English</button>
+                                        <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('de')}>Deutsch</button>
+                                        <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('zh')}>中文</button>
                                     </ul>
                                 </div>
                             </div>

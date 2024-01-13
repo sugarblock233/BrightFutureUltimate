@@ -3,9 +3,12 @@ import './css/style.css';
 import logo from './images/BrightFutureLogo05.png';
 import backgroundImage from './images/background_image (3).png';
 import peopleBack from './images/peopleBackground.png';
+import { useTranslation } from 'react-i18next';
 
 
 function HomePage(){
+    const { t} = useTranslation();
+
     return(
     <>
         <meta charSet="UTF-8" />
@@ -32,17 +35,12 @@ function HomePage(){
             <div className="flex flex-col basis-3/5 flex-grow-0">
                 <section className="pb-8 mt-10 md:mt-20">
                     <div className="flex flex-row ">
-                        <div className="basis-3/5 flex flex-col">
+                        <div className="basis-4/5 flex flex-col">
                             <h1 className="text-4xl font-bold leading-10 pb-4 md:w-4/5">
-                                Illuminating Paths to Education in Germany
+                                {t('HOMETITLE01')}
                             </h1>
                             <p className="text-lg">
-                                At Bright Future, we are dedicated to empowering students from
-                                around the globe by providing them with opportunities to pursue
-                                their educational dreams in Germany. Our commitment is to bridge
-                                the gap for underprivileged students, enabling access to Germany's
-                                esteemed educational institutions. Join us in this journey to
-                                light up futures and transform lives, one scholarship at a time.
+                                {t('HOMETEXT01')}
                             </p>
                         </div>
                         <div className="basis-2/5"></div>
@@ -54,51 +52,34 @@ function HomePage(){
                     <div className="flex flex-col">
                         <div className="md:w-3/5"></div>
                         <div>
-                            <h3 className="text-blue-600 text-2xl font-bold">Our Mission:</h3>
+                            <h3 className="text-blue-600 text-2xl font-bold">{t('HOMETITLE02')}:</h3>
                             <br />
                             <p className="text-lg leading-7">
-                                At Bright Future, we strive to brighten the horizons of global
-                                youth by unlocking doors to Germany's premier education. We are
-                                passionate about cultivating a diverse community of learners who
-                                can emerge as the next wave of innovators, thinkers, and leaders.
-                                By dismantling barriers to educational access, we aim to empower
-                                underrepresented students to chase their academic and professional
-                                dreams.
+                                {t('HOMETEXT02')}
                             </p>
                             <br />
                             <br />
-                            <h3 className="text-blue-600 text-2xl font-bold">Our Values:</h3>
+                            <h3 className="text-blue-600 text-2xl font-bold">{t('HOMETITLE03')}:</h3>
                             <br />
                             <div>
                                 <p className="text-lg leading-7">
-                                    At Bright Future, our values guide our mission and are reflected
-                                    in every scholarship we award. We honor:
+                                    {t('HOMETEXT03')}
                                 </p>
                                 <ul className="text-base leading-7 list-disc list-inside md:w-5/6">
                                     <li>
-                                        <strong>Empowerment: </strong> We are committed to equipping
-                                        students with the necessary tools, resources, and support to
-                                        catalyze their educational and personal development.
+                                        <strong>{t('HOMETEXT03_011')}</strong>{t('HOMETEXT03_01')}
                                     </li>
                                     <li>
-                                        <strong>Access: </strong> Our dedication lies in opening the
-                                        doors of German higher education to all, with special
-                                        attention to aiding those from underprivileged backgrounds.
+                                        <strong>{t('HOMETEXT03_021')}</strong>{t('HOMETEXT03_02')}
                                     </li>
                                     <li>
-                                        <strong>Excellence: </strong> We advocate for the pursuit of
-                                        academic brilliance, connecting students to Germany's renowned
-                                        institutions to foster their pursuit of knowledge.
+                                        <strong>{t('HOMETEXT03_031')}</strong>{t('HOMETEXT03_03')}
                                     </li>
                                     <li>
-                                        <strong>Diversity: </strong> Celebrating a multitude of
-                                        perspectives, we embrace diversity, which enriches the
-                                        learning environment and sparks innovation and inclusivity.
+                                        <strong>{t('HOMETEXT03_041')}</strong>{t('HOMETEXT03_04')}
                                     </li>
                                     <li>
-                                        <strong>Transformation: </strong> Beyond academics, we focus
-                                        on transforming lives and communities, offering scholarships
-                                        that bring about change one student at a time.
+                                        <strong>{t('HOMETEXT03_051')}</strong>{t('HOMETEXT03_05')}
                                     </li>
                                 </ul>
                             </div>
@@ -126,18 +107,13 @@ function HomePage(){
                                         </div>
                                         <div className="basis-4/5">
                                             <p className="font-bold">
-                                                Unlocking impact through global education and
-                                                opportunities
+                                                {t('HOMETEXT0401')}
                                             </p>
                                         </div>
                                     </div>
                                     <br />
                                     <div className="">
-                                        We support scholars from modest backgrounds with the
-                                        application process, internships, and independent ventures.
-                                        All scholars commit to return to Ukraine within 5 years after
-                                        college graduation and to work in managerial positions for at
-                                        least 5 years.
+                                        {t('HOMETEXT0404')}
                                     </div>
                                 </div>
                                 <div className="flex flex-col basis-1/3 px-2">
@@ -161,16 +137,13 @@ function HomePage(){
                                         </div>
                                         <div className="basis-4/5">
                                             <p className="translate-y-2 font-bold">
-                                                Sustaining impact through a strong network
+                                                {t('HOMETEXT0402')}
                                             </p>
                                         </div>
                                     </div>
                                     <br />
                                     <div className="">
-                                        We build a family of bright and patriotic Ukrainians
-                                        passionate about changing Ukraine and the world. UGS scholars
-                                        serve as Ukraine’s ambassadors on school campuses and give
-                                        back to UGS through volunteering.
+                                        {t('HOMETEXT0405')}
                                     </div>
                                 </div>
                                 <div className="flex flex-col basis-1/3 px-2">
@@ -194,15 +167,13 @@ function HomePage(){
                                         </div>
                                         <div className="basis-4/5">
                                             <p className="translate-y-2 font-bold">
-                                                Scaling impact through results-driven mindset
+                                                {t('HOMETEXT0403')}
                                             </p>
                                         </div>
                                     </div>
                                     <br />
                                     <div className="">
-                                        Leadership Team and Mentors collaborate to maximize
-                                        full-scholarship admission chances, committed to finding best
-                                        fit schools based on each scholar’s profile and preferences.
+                                        {t('HOMETEXT0406')}
                                     </div>
                                 </div>
                             </div>
@@ -230,19 +201,16 @@ function HomePage(){
                                                 </svg>
                                             </div>
                                             <div className="basis-4/5">
-                                                <p className="font-bold text-base">Select</p>
+                                                <p className="font-bold text-base">{t('HOMETEXT050101')}</p>
                                                 <p className="text-xs text-gray-800">
-                                                    Identify ~70 scholars annually (5-7% acceptance rate).
+                                                    {t('HOMETEXT050201')}
                                                 </p>
                                             </div>
                                         </div>
                                         <br />
                                         <div>
                                             <p className="px-4 text-sm">
-                                                We have a dedicated admissions team and a three-stage
-                                                application process. The process consists of an online
-                                                application, online English and Math tests, and 1-3 online
-                                                admission interviews.
+                                                {t('HOMETEXT0501')}
                                             </p>
                                         </div>
                                     </div>
@@ -264,20 +232,16 @@ function HomePage(){
                                                 </svg>
                                             </div>
                                             <div className="basis-4/5">
-                                                <p className="font-bold text-base">Prepare</p>
-                                                <p className="text-xs text-gray-600">
-                                                    Guide students through the application process.
+                                                <p className="font-bold text-base">{t('HOMETEXT050102')}</p>
+                                                <p className="text-xs text-gray-800">
+                                                    {t('HOMETEXT050202')}
                                                 </p>
                                             </div>
                                         </div>
                                         <br />
                                         <div>
                                             <p className="px-4 text-sm">
-                                                We have a network of 60+ mentors and 30+ co-mentors
-                                                providing 1:1 application guidance. All scholars attend a
-                                                10-day onboarding camp, and those who need to improve test
-                                                scores, attend a 6-week test prep school. We also cover
-                                                100% of application expenses.
+                                                {t('HOMETEXT0502')}
                                             </p>
                                         </div>
                                     </div>
@@ -301,19 +265,16 @@ function HomePage(){
                                                 </svg>
                                             </div>
                                             <div className="basis-4/5">
-                                                <p className="font-bold text-base">Select</p>
-                                                <p className="text-xs text-gray-600">
-                                                    Identify ~70 scholars annually (5-7% acceptance rate).
+                                                <p className="font-bold text-base">{t('HOMETEXT050103')}</p>
+                                                <p className="text-xs text-gray-800">
+                                                    {t('HOMETEXT050203')}
                                                 </p>
                                             </div>
                                         </div>
                                         <br />
                                         <div>
                                             <p className="px-4 text-sm">
-                                                We have a dedicated admissions team and a three-stage
-                                                application process. The process consists of an online
-                                                application, online English and Math tests, and 1-3 online
-                                                admission interviews.
+                                                {t('HOMETEXT0503')}
                                             </p>
                                         </div>
                                     </div>
@@ -337,20 +298,16 @@ function HomePage(){
                                                 </svg>
                                             </div>
                                             <div className="basis-4/5">
-                                                <p className="font-bold text-base">Prepare</p>
-                                                <p className="text-xs text-gray-600">
-                                                    Guide students through the application process.
+                                                <p className="font-bold text-base">{t('HOMETEXT050104')}</p>
+                                                <p className="text-xs text-gray-800">
+                                                    {t('HOMETEXT050204')}
                                                 </p>
                                             </div>
                                         </div>
                                         <br />
                                         <div>
                                             <p className="px-4 text-sm">
-                                                We have a network of 60+ mentors and 30+ co-mentors
-                                                providing 1:1 application guidance. All scholars attend a
-                                                10-day onboarding camp, and those who need to improve test
-                                                scores, attend a 6-week test prep school. We also cover
-                                                100% of application expenses.
+                                                {t('HOMETEXT0504')}
                                             </p>
                                         </div>
                                     </div>
@@ -370,47 +327,45 @@ function HomePage(){
                         <div className="absolute inset-0 flex flex-col justify-center items-center px-4 py-3 bg-sky-600 bg-opacity-60 shadow-2xl">
                             <div className="text-center">
                                 <p className="text-3xl font-bold text-blue-900 md:text-left">
-                                    Our results
+                                    {t('OURRESULTS')}
                                 </p>
                                 <h2 className="w-full mt-6 text-3xl font-bold text-center text-white md:text-left md:w-2/3">
-                                    We build a network of high-potential Ukrainians, multiplying our
-                                    impact.
+                                    {t('HOMETEXT0601')}
                                 </h2>
                                 <div className="md:w-3/5 text-base mt-8 leading-relaxed text-center text-white md:text-left">
-                                    Since 2015, UGS has helped 250 young Ukrainians receive $62+
-                                    million in full scholarships...
+                                    {t('HOMETEXT0602')}
                                 </div>
                                 <div className="flex flex-row mt-12">
                                     <div className="basis-1/4 flex flex-col">
                                         <h3 className="text-lg font-bold text-white">
-                                            <strong>|</strong> 250 (86%)
+                                            <strong>|</strong> 50 (72%)
                                         </h3>
                                         <p className="text-sm text-white">
-                                            students admitted at boarding schools and colleges.
+                                            {t('HOMETEXT0603')}
                                         </p>
                                     </div>
                                     <div className="basis-1/4 flex flex-col">
                                         <h3 className="text-lg font-bold text-white">
-                                            <strong>|</strong> 250 (86%)
+                                            <strong>|</strong> 200 (4%)
                                         </h3>
                                         <p className="text-sm text-white">
-                                            students admitted at boarding schools and colleges.
+                                            {t('HOMETEXT0604')}
                                         </p>
                                     </div>
                                     <div className="basis-1/4 flex flex-col">
                                         <h3 className="text-lg font-bold text-white">
-                                            <strong>|</strong> 250 (86%)
+                                            <strong>|</strong> 10 (18%)
                                         </h3>
                                         <p className="text-sm text-white">
-                                            students admitted at boarding schools and colleges.
+                                            {t('HOMETEXT0605')}
                                         </p>
                                     </div>
                                     <div className="basis-1/4 flex flex-col">
                                         <h3 className="text-lg font-bold text-white">
-                                            <strong>|</strong> 250 (86%)
+                                            <strong>|</strong> 1500 (88%)
                                         </h3>
                                         <p className="text-sm text-white">
-                                            students admitted at boarding schools and colleges.
+                                            {t('HOMETEXT0606')}
                                         </p>
                                     </div>
                                 </div>
@@ -427,45 +382,45 @@ function HomePage(){
                             <div className="basis-1/2 flex flex-col md:w-3/5">
                                 <div>
                                     <h1 className="text-2xl font-bold pb-4">
-                                        Subscribe to our newsletter
+                                        {t('HOMETEXT0701')}
                                     </h1>
                                 </div>
                                 <div>
                                     <p className="text-base pb-10">
-                                        Stay informed about BrightFuture progress via our newsletter.
+                                        {t('HOMETEXT0702')}
                                     </p>
                                 </div>
                                 <div className="flex rounded">
                                     <input
                                         type="text"
                                         className="md:w-3/5 px-4 py-2 w-full rounded-s-lg"
-                                        placeholder="Enter your email..."
+                                        placeholder={t('ENTEREMAIL')}
                                     />
                                     <button className="px-4 text-white bg-blue-600 border-l rounded-r-lg hover:bg-blue-800">
-                                        Subscribe
+                                        {t('SUBSCRIBE')}
                                     </button>
                                 </div>
                                 <br />
                                 <div>
                                     <p className="text-base pb-10">
-                                        Or you could choose to accept our Text Message Notification
+                                        {t('HOMETEXT0703')}
                                     </p>
                                 </div>
                                 <div className="flex rounded">
                                     <input
                                         type="text"
                                         className="md:w-3/5 px-4 py-2 w-full rounded-s-lg"
-                                        placeholder="Enter your Phone Number..."
+                                        placeholder={t('ENTERPHONE')}
                                     />
                                     <button className="px-4 text-white bg-blue-600 border-l rounded-r-lg hover:bg-blue-800">
-                                        Subscribe
+                                        {t('SUBSCRIBE')}
                                     </button>
                                 </div>
                             </div>
                             <div className="basis-1/2">
                                 <div className="flex flex-col">
                                     <div>
-                                        <h1 className="text-2xl font-bold">Anonymous Feedback</h1>
+                                        <h1 className="text-2xl font-bold">{t('ANONYMOUSFEEDBACK')}</h1>
                                     </div>
                                     <div className="relative w-full px-2 h-96 rounded-2xl">
                                         <div className="absolute left-0">
@@ -477,10 +432,10 @@ function HomePage(){
                                                         name="options"
                                                         className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
                                                     >
-                                                        <option value="">Select your question...</option>
-                                                        <option value={1}>Website Improvement</option>
-                                                        <option value={2}>Can't Contact Us</option>
-                                                        <option value={3}>Other</option>
+                                                        <option value="">{t('SELECTYOURQUESTION')}</option>
+                                                        <option value={1}>{t('HOMEQUES01')}</option>
+                                                        <option value={2}>{t('HOMEQUES02')}</option>
+                                                        <option value={3}>{t('HOMEQUES03')}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -488,19 +443,18 @@ function HomePage(){
                                             <div className="pb-2 pl-2">
                       <textarea
                           className="w-full h-48 text-sm border-2 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 resize-none px-2 py-2"
-                          placeholder="Enter your message..."
+                          placeholder={t('ENTERYOURMESSIAGE')}
                           defaultValue={""}
                       />
                                             </div>
                                             {/*                                    submit button*/}
                                             <div className="flex flex-row flex-row-reverse px-2 pb-8">
                                                 <button className="py-1 px-4 text-white bg-blue-600 border-l rounded-lg hover:bg-blue-800">
-                                                    Submit
+                                                    {t('SUBMIT')}
                                                 </button>
                                                 <div className="">
                                                     <p className="text-xs text-gray-700">
-                                                        *This form will be anonymous, we will not collect any
-                                                        personal information.
+                                                        {t('HOMEFORMNOTE')}
                                                     </p>
                                                 </div>
                                             </div>

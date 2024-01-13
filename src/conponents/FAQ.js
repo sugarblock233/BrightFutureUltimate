@@ -3,8 +3,10 @@ import './css/style.css';
 import logo from './images/BrightFutureLogo05.png';
 import backgroundImage from "./images/background_image (3).png";
 import CollapsibleCard from './CollapsibleCard';
+import { useTranslation } from 'react-i18next';
 
 function FAQ() {
+    const { t} = useTranslation();
 
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -15,37 +17,37 @@ function FAQ() {
 
     const cardsData = [
         {
-            title: "What is Bright Futures for?",
-            content: "At Bright Futures, we are dedicated to empowering students from around the globe by providing them with opportunities to pursue their educational dreams in Germany. Our commitment is to bridge the gap for underprivileged students, enabling access to Germany's esteemed educational institutions. Join us in this journey to light up futures and transform lives, one scholarship at a time."
+            title: t('faqtitle01'),
+            content: t('faqdescription01')
         },
         {
-            title: "How can I get involved?",
-            content: "Our programme does not have a single source of funding. We rely on grassroots fundraising in Germany as well as support of a large number of individual and corporate donors. If interested in making a donation to us, please review the Donate section of our website."
+            title: t('faqtitle02'),
+            content: t('faqdescription02')
         },
         {
-            title: "Why are you helping me? What are you getting from this?",
-            content: "Bright Futures is a non-profit organization, it doesn't receive any profit from supporting the students. Our help doesn't involve any payments from students and their families. Our only requirement for Bright Futures is to provide help to the organization as volunteers."
+            title: t('faqtitle03'),
+            content: t('faqdescription03')
         },
         {
-            title: "What are the admissions criteria?",
-            content: "While reviewing each application, we assess a number of factors to select well-rounded, accomplished, and prepared candidates who are most likely to get admitted to best universities with our help. Our main criteria include the student's grades and English fluency, the track record of academic and extracurricular achievements, the track record of contributions to their school/home communities, the strength of character (defined as maturity, resilience, high energy, etc.), their family income, and desire to study in Germany."
+            title: t('faqtitle04'),
+            content: t('faqdescription04')
         },
         {
-            title: "How will my admissions decision be communicated to me?",
-            content: "Regardless of whether you are accepted or rejected, you will receive email notifications from our Admissions team with final admission decisions."
+            title: t('faqtitle05'),
+            content: t('faqdescription05')
         },
         {
-            title: "Who pays for students' education abroad?",
-            content: "Schools and colleges provide generous scholarships to cover the cost of education and living expenses for students. Bright Futures only covers the cost of the application process and standardized tests. Students perform at the top of their class consistently and typically make lasting contributions to their schools."
+            title: t('faqtitle06'),
+            content: t('faqdescription06')
         },
         {
-            title: "Can I stay abroad and get a master's degree after college graduation? Will you help me with the application process?",
-            content: "Although we encourage our students to get work experience anywhere in the world after college graduation, you are free to proceed your studies as long as they are not longer than 5 years. However, we do not help our students receive a master's degree."
+            title: t('faqtitle07'),
+            content: t('faqdescription07')
         },
         {
-            title: "Can I apply to your program twice?",
-            content: "Yes, you are welcome to apply to Bright Futures more than once."
-        }
+            title: t('faqtitle08'),
+            content: t('faqdescription08')
+        },
         // 更多数据
     ];
 
@@ -75,7 +77,7 @@ function FAQ() {
                         <div className="pb-8 mt-10 md:mt-20">
                             <div className="w-full mt-10 text-center md:w-3/4 md:mr-4 md:text-left md:mt-0">
                                 <h1 className="text-4xl font-extrabold leading-none text-gray-900 heading">
-                                    Frequently Asked Questions
+                                    {t('faqtitle')}
                                 </h1>
                             </div>
                         </div>
@@ -84,7 +86,7 @@ function FAQ() {
                                 <input
                                     type="text"
                                     className="py-2 px-2 border-2 border-gray-100 rounded-md w-full"
-                                    placeholder="Search keywords..."
+                                    placeholder={t('searchkeywords')}
                                     autoComplete="off"
                                     onChange={handleSearchChange}
                                 />
