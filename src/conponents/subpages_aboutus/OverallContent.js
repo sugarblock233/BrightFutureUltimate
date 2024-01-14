@@ -1,66 +1,102 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
+import logo from "../images/BrightFutureLogo05.png";
 
 const Overall = () => {
+    const { t} = useTranslation();
     // 总览内容
     return <div>
         <br></br>
         <br></br>
         <h2 id="content-header" className="justify-center text-4xl font-bold">
-            About us-Overall
+            {t('ABSP1TITLE01')}
         </h2>
         <br/>
-        <div className="flex flex-col text-xl leading-normal gap-y-8">
+        <div className="flex flex-col text-lg leading-normal gap-y-8">
             <p className="indent-8">
-                Bright Future is a volunteer-driven startup organization dedicated to
-                assisting students in Germany who face financial difficulties in their
-                studies. Despite being a burgeoning team with just a few members and
-                no physical office, we firmly believe that talent and creativity are
-                the driving forces behind our progress.
+                {t('ABSP1TEXT01')}
             </p>
             <p className="indent-8">
-                Our team consists of 4 passionate volunteers who form the backbone of
-                Bright Future. These volunteers play a vital role in administrative
-                and organizational work, and they are key in planning and executing
-                various support projects. Their work includes, but is not limited to:
+                {t('ABSP1TEXT02')}
             </p>
             <ul className="list-disc list-inside">
                 <div className="flex flex-col leading-normal pl-10 gap-y-4">
                     <li>
-                        Academic Support and Tutoring: We offer one-on-one tutoring to
-                        students who struggle academically, helping them overcome
-                        educational barriers and improve their grades.
+                        <strong>{t('ABSP1TEXT020101')}</strong>{t('ABSP1TEXT020102')}
                     </li>
                     <li>
-                        Financial Aid Consultation: We assist students in understanding
-                        and applying for available financial aid and scholarships to
-                        alleviate their economic burdens.
+                        <strong>{t('ABSP1TEXT020201')}</strong>{t('ABSP1TEXT020202')}
                     </li>
                     <li>
-                        Community Building: Through organizing activities and workshops,
-                        we aim to establish a supportive community, ensuring students do
-                        not feel alone and receive encouragement and help throughout their
-                        academic journey.
+                        <strong>{t('ABSP1TEXT020301')}</strong>{t('ABSP1TEXT020302')}
                     </li>
                     <li>
-                        Career Planning and Guidance: We provide guidance and advice for
-                        career development, helping students prepare for their future
-                        careers.
+                        <strong>{t('ABSP1TEXT020401')}</strong>{t('ABSP1TEXT020402')}
                     </li>
                 </div>
             </ul>
             <p className="indent-8">
-                Our goal is to not only assist students in achieving academic success
-                through these efforts but also to offer more support and guidance for
-                their lives in Germany. As a public welfare organization, Bright
-                Future relies on donations and support from all sectors of society,
-                enabling us to continue providing essential help to these students.
+                {t('ABSP1TEXT03')}
             </p>
             <p className="indent-8">
-                We understand the challenges of studying abroad, especially for those
-                facing financial difficulties. Hence, we are committed to creating a
-                warm and inclusive environment, where all students have the
-                opportunity to realize their academic and career aspirations.
+                {t('ABSP1TEXT04')}
             </p>
+        </div>
+        <br/>
+        <hr/>
+        <br/>
+
+        <div>
+            <div className="flex flex-row">
+                <div className="basis-2/5 flex flex-col">
+                    <div className="copyright_footer">
+                        <p className="text-xs">
+                            © 2023 All Rights Reserved by
+                            <a className="text-black hover:text-blue-600" href="#">
+                                BrightFuture
+                            </a>
+                            .
+                        </p>
+                    </div>
+                    <div className="group  relative group">
+                        <a href="#" className="text-xs hover:text-blue-600 inline-block">
+                            Contact Us
+                            <span
+                                className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-xs rounded py-1 px-2">
+                  Email: huangjunzhao2003@gmail.com
+                </span>
+                        </a>
+                    </div>
+                </div>
+                <div className="basis-1/5 flex items-center justify-center">
+                    <div className="transform">
+                        <picture>
+                            <img
+                                className="bg-cover"
+                                src={logo}
+                                alt={logo}
+                            />
+                        </picture>
+                    </div>
+                </div>
+                <div className="basis-2/5  flex items-center justify-center">
+                    <div className="flex flex-row-reverse text-xl space-x-8">
+                        <a/>
+                        <a href="https://www.facebook.com">
+                            <i className="fab fa-facebook hover:text-blue-600"/>
+                        </a>
+                        <a href="https://www.twitter.com">
+                            <i className="fab fa-twitter hover:text-blue-500"/>
+                        </a>
+                        <a href="https://www.youtube.com">
+                            <i className="fab fa-youtube hover:text-red-600"/>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <i className="fab fa-instagram hover:text-pink-600"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>;
 };

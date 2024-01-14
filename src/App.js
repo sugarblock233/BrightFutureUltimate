@@ -7,6 +7,8 @@ import Aboutus from "./conponents/Aboutus";
 import OverallContent from './conponents/subpages_aboutus/OverallContent';
 import OurGoal from './conponents/subpages_aboutus/OurGoal';
 import TeamMember from "./conponents/subpages_aboutus/TeamMember";
+import HFU from "./conponents/subpages_aboutus/HFU";
+import USST from "./conponents/subpages_aboutus/USST";
 import FAQ from "./conponents/FAQ";
 import Donate from "./conponents/Donate";
 import './conponents/css/style.css';
@@ -164,6 +166,8 @@ function App() {
                         <Route path="overall" element={<OverallContent/>}/>
                         <Route path="goal" element={<OurGoal/>}/>
                         <Route path="teamMember" element={<TeamMember/>}/>
+                        <Route path="hfu" element={<HFU/>}/>
+                        <Route path="usst" element={<USST/>}/>
                     </Route>
                     <Route path="/faq" element={<FAQ/>}/>
                     <Route path="/donate" element={<Donate/>}/>

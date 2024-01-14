@@ -4,9 +4,14 @@ import { Routes, Route, Link} from 'react-router-dom';
 import OverallContent from './subpages_aboutus/OverallContent';
 import OurGoal from './subpages_aboutus/OurGoal';
 import TeamMember from "./subpages_aboutus/TeamMember";
+import HFU from "./subpages_aboutus/HFU";
+import USST from "./subpages_aboutus/USST";
 import backgroundImage from './images/background_image (3).png';
+import {useTranslation} from "react-i18next";
 
 function Aboutus() {
+    const { t} = useTranslation();
+
     return (
         <div>
             {
@@ -38,58 +43,56 @@ function Aboutus() {
                             <div
                                 className="fixed pt-4 px-8 mx-4 mt-2 w-fit max-h-160 shadow-inner shadow-sky-100 overflow-y-auto 2xl:max-h-256">
                                 <br></br>
-                                <h2 className="text-3xl font-semibold pb-2">Main</h2>
+                                <h2 className="text-3xl font-semibold pb-2">{t('ABSIDE01')}</h2>
                                 <ul className="space-y-2 list-inside list-image-none text-xl">
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        <Link to="/aboutus/overall">Overall</Link>
+                                        <Link to="/aboutus/overall">{t('ABSIDE0101')}</Link>
                                     </li>
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        <Link to="/aboutus/goal">Goal</Link>
+                                        <Link to="/aboutus/goal">{t('ABSIDE0102')}</Link>
                                     </li>
                                     <li className="hover:text-blue-600 cursor-pointer  indent-4">
-                                        <Link to="/aboutus/teammember">TeamMember</Link>
+                                        <Link to="/aboutus/teammember">{t('ABSIDE0103')}</Link>
                                     </li>
                                 </ul>
-                                <h2 className="mt-4 mb-2 font-semibold text-3xl">Partners</h2>
+                                <h2 className="mt-4 mb-2 font-semibold text-3xl">{t('ABSIDE02')}</h2>
                                 <ul className="space-y-2 list-inside list-image-none text-xl">
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">
+                                        <li className="hover:text-blue-600 cursor-pointer  indent-4">
+                                            <Link to="/aboutus/HFU">{t('ABSIDE0201')}</Link>
+                                        </li>
+                                    </li>
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">
+                                        <li className="hover:text-blue-600 cursor-pointer indent-4">
+                                            <Link to="/aboutus/USST">{t('ABSIDE0202')}</Link>
+                                        </li>
+                                    </li>
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
                                         <button
                                             className="hover:text-blue-600 bg-transparent border-none p-0 cursor-pointer">
-                                            HFU
-                                        </button>
-                                    </li>
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        <button
-                                            className="hover:text-blue-600 bg-transparent border-none p-0 cursor-pointer">
-                                            USST
-                                        </button>
-                                    </li>
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        <button
-                                            className="hover:text-blue-600 bg-transparent border-none p-0 cursor-pointer">
-                                            USTB
+                                            {t('ABSIDE0203')}
                                         </button>
                                     </li>
                                 </ul>
-                                <h2 className="mt-4 mb-2 font-semibold text-3xl">Country</h2>
+                                <h2 className="mt-4 mb-2 font-semibold text-3xl">{t('ABSIDE03')}</h2>
                                 <ul className="space-y-2 list-inside list-image-none text-xl">
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        German
+                                        {t('ABSIDE0301')}
                                     </li>
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">China</li>
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">{t('ABSIDE0302')}</li>
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        Ukraine
+                                        {t('ABSIDE0303')}
                                     </li>
                                     <li className="hover:text-blue-600 cursor-pointer indent-4">
-                                        Mexico
+                                        {t('ABSIDE0304')}
                                     </li>
                                 </ul>
-                                <h2 className="mt-4 mb-2 font-semibold text-3xl">News</h2>
+                                <h2 className="mt-4 mb-2 font-semibold text-3xl">{t('ABSIDE04')}</h2>
                                 <ul className="space-y-2 list-inside list-image-none text-xl">
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">2024</li>
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">2023</li>
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">2022</li>
-                                    <li className="hover:text-blue-600 cursor-pointer indent-4">2021</li>
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">{t('ABSIDE0401')}</li>
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">{t('ABSIDE0402')}</li>
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">{t('ABSIDE0403')}</li>
+                                    <li className="hover:text-blue-600 cursor-pointer indent-4">{t('ABSIDE0404')}</li>
                                 </ul>
                             </div>
                         </div>
@@ -101,6 +104,8 @@ function Aboutus() {
                                 <Route path="overall" element={<OverallContent/>}/>
                                 <Route path="goal" element={<OurGoal/>}/>
                                 <Route path="teamMember" element={<TeamMember/>}/>
+                                <Route path="HFU" element={<HFU/>}/>
+                                <Route path="USST" element={<USST/>}/>
                             </Routes>
 
                             <br/>

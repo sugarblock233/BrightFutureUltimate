@@ -1,73 +1,107 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
+import logo from "../images/BrightFutureLogo05.png";
 
 const Goal = () => {
+    const { t} = useTranslation();
     // 目标内容
     return <div>
         <>
             <br></br>
             <br></br>
             <h2 id="content-header" className="justify-center text-4xl font-bold pb-4">
-                Our Goal
+                {t('ABSP2TITLE01')}
             </h2>
             <h4 id="content-bheader" className="justify-center text-2xl font-medium">
-                ——Empowering Students for a Brighter Tomorrow
+                {t('ABSP2TITLE010')}
             </h4>
-            <br />
-            <div className="flex flex-col text-xl leading-normal gap-y-8">
+            <br/>
+            <div className="flex flex-col text-lg leading-normal gap-y-8">
                 <p className="indent-8">
-                    At Bright Future, our goals are rooted in the belief that every student
-                    deserves an equal opportunity to excel, irrespective of their financial
-                    background. We are dedicated to turning this belief into reality through
-                    our concerted efforts in the following areas:
+                    {t('ABSP2TEXT01')}
                 </p>
                 <ul className="list-disc list-inside">
                     <div className="flex flex-col leading-normal pl-10 gap-y-4">
                         <li>
-                            Breaking Educational Barriers: We strive to offer personalized
-                            academic support and tutoring, enabling students to overcome
-                            challenges in their studies and achieve academic excellence.
+                            <strong>{t('ABSP2TEXT010101')}</strong>{t('ABSP2TEXT010102')}
                         </li>
                         <li>
-                            Easing Financial Struggles: Understanding the complexities of
-                            financial aid, we commit to providing comprehensive consultation
-                            services. Our aim is to guide students through the maze of
-                            scholarships and financial aid, reducing their financial burdens and
-                            opening doors to new educational opportunities.
+                            <strong>{t('ABSP2TEXT010201')}</strong>{t('ABSP2TEXT010202')}
                         </li>
                         <li>
-                            Fostering a Supportive Community: We believe in the power of
-                            community. By organizing workshops and activities, we aim to create a
-                            nurturing and supportive environment where students can find
-                            encouragement, build networks, and feel a sense of belonging during
-                            their academic journey.
+                            <strong>{t('ABSP2TEXT010301')}</strong>{t('ABSP2TEXT010302')}
                         </li>
                         <li>
-                            Guiding Career Paths: Recognizing the importance of career planning,
-                            we offer guidance and advice tailored to individual needs. Our goal is
-                            to help students not only envision but also take concrete steps
-                            towards their future careers.
+                            <strong>{t('ABSP2TEXT010401')}</strong>{t('ABSP2TEXT010402')}
                         </li>
                         <li>
-                            Inclusivity and Support: We are dedicated to creating an inclusive
-                            atmosphere where students from diverse backgrounds can thrive. Our
-                            focus is on offering holistic support, ensuring that every student has
-                            the opportunity to realize their academic and professional dreams in
-                            Germany.
+                            <strong>{t('ABSP2TEXT010501')}</strong>{t('ABSP2TEXT010502')}
                         </li>
                         <li>
-                            Community Engagement and Growth: As a volunteer-driven organization,
-                            we actively seek to expand our community engagement. We aim to
-                            collaborate with various sectors of society, harnessing their support
-                            to grow our initiatives and reach more students in need.
+                            <strong>{t('ABSP2TEXT010601')}</strong>{t('ABSP2TEXT010602')}
                         </li>
                     </div>
                 </ul>
                 <p className="indent-8">
-                    By achieving these goals, Bright Future aspires to be a beacon of hope and
-                    a catalyst for change in the lives of students in Germany. Our vision is
-                    to see a world where every student, regardless of their financial
-                    situation, has the opportunity to shine and achieve their full potential.
+                    {t('ABSP2TEXT02')}
                 </p>
+            </div>
+
+            <br/>
+            <hr/>
+            <br/>
+
+            <div>
+                <div className="flex flex-row">
+                    <div className="basis-2/5 flex flex-col">
+                        <div className="copyright_footer">
+                            <p className="text-xs">
+                                © 2023 All Rights Reserved by
+                                <a className="text-black hover:text-blue-600" href="#">
+                                    BrightFuture
+                                </a>
+                                .
+                            </p>
+                        </div>
+                        <div className="group  relative group">
+                            <a href="#" className="text-xs hover:text-blue-600 inline-block">
+                                Contact Us
+                                <span
+                                    className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-xs rounded py-1 px-2">
+                  Email: huangjunzhao2003@gmail.com
+                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="basis-1/5 flex items-center justify-center">
+                        <div className="transform">
+                            <picture>
+                                <img
+                                    className="bg-cover"
+                                    src={logo}
+                                    alt={logo}
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                    <div className="basis-2/5  flex items-center justify-center">
+                        <div className="flex flex-row-reverse text-xl space-x-8">
+                            <a/>
+                            <a href="https://www.facebook.com">
+                                <i className="fab fa-facebook hover:text-blue-600"/>
+                            </a>
+                            <a href="https://www.twitter.com">
+                                <i className="fab fa-twitter hover:text-blue-500"/>
+                            </a>
+                            <a href="https://www.youtube.com">
+                                <i className="fab fa-youtube hover:text-red-600"/>
+                            </a>
+                            <a href="https://www.instagram.com">
+                                <i className="fab fa-instagram hover:text-pink-600"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
 
