@@ -3,6 +3,7 @@ import './css/style.css';
 import logo from './images/BrightFutureLogo05.png';
 import backgroundImage from './images/background_image (3).png';
 import peopleBack from './images/peopleBackground.png';
+import students from './images/students.png';
 import { useTranslation } from 'react-i18next';
 
 
@@ -35,7 +36,7 @@ function HomePage(){
             <div className="flex flex-col basis-3/5 flex-grow-0">
                 <section className="pb-8 mt-10 md:mt-20">
                     <div className="flex flex-row ">
-                        <div className="basis-4/5 flex flex-col">
+                        <div className="basis-3/5 flex flex-col">
                             <h1 className="text-4xl font-bold leading-10 pb-4 md:w-4/5">
                                 {t('HOMETITLE01')}
                             </h1>
@@ -43,7 +44,13 @@ function HomePage(){
                                 {t('HOMETEXT01')}
                             </p>
                         </div>
-                        <div className="basis-2/5"></div>
+                        <div className="basis-2/5">
+                            <img
+                                className="w-full"
+                                src={students}
+                                alt=""
+                            />
+                        </div>
                     </div>
                     <br />
                     <br />
