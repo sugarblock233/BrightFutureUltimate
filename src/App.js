@@ -16,6 +16,8 @@ import { useTranslation } from 'react-i18next';
 
 
 function App() {
+    // useTranslation 钩子使得你可以在组件内部访问翻译函数 t。这个函数可以用来翻译内容，基于当前选择的语言
+    // The useTranslation hook gives you access to the t function inside your component. This function can be used to translate content based on the currently selected language.
     const { t , i18n} = useTranslation();
 
     return (
@@ -36,6 +38,8 @@ function App() {
                             className="flex flex-row place-items-center px-8 h-16 text-3lg font-sans shadow-md"
                             style={{backgroundColor: "rgba(255,255,255,0.95)"}}
                         >
+                            {/*NavLink是一种特殊的Link组件，可以知道和当前URL匹配的组件添加特定的样式和类*/}
+                            {/*NavLink is a special Link component that can add specific styles and classes to components that match the current URL.*/}
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
@@ -47,6 +51,8 @@ function App() {
                                 {({ isActive }) => (
                                     <>
                                         {t('HOME')}
+                                        {/*这个isActive参数用来显示链接是否激活*/}
+                                        {/*This isActive parameter is used to show whether the link is active.*/}
                                         {isActive && <span className="absolute -bottom-5 left-0 right-0 h-1 bg-sky-500"></span>}
                                     </>
                                 )}
@@ -157,11 +163,14 @@ function App() {
                 </nav>
                 <br></br>
                 <br></br>
-
+                {/*route根据目前的url渲染子route*/}
+                {/*route renders sub-route based on the current url*/}
                 <Routes>
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/admission" element={<Admission/>}/>
                     <Route path="/results" element={<Results/>}/>
+                    {/*嵌套route*/}
+                    {/*Nested routes*/}
                     <Route path="/aboutus" element={<Aboutus/>}>
                         <Route path="overall" element={<OverallContent/>}/>
                         <Route path="goal" element={<OurGoal/>}/>

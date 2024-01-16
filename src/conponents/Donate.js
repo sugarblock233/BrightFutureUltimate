@@ -110,6 +110,8 @@ function Donate() {
         setEmail(e.target.value);
     };
 
+    // 正则表达式检查邮箱格式
+    // Regular expression to check email format
     const isValidEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
