@@ -303,7 +303,7 @@ function Donate() {
                                         className="flex flex-col w-full h-fit bg-gray-50 shadow-2xl border-2 border-gray-100 rounded-t-2xl">
                                         <div className="flex flex-col">
                                             <div>
-                                                <h1 className="text-2xl font-bold px-4 py-4 bg-blue-700 rounded-t-2xl text-white">
+                                                <h1 className="text-2xl font-bold px-4 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-t-2xl text-white">
                                                     {t('donatestep01')}
                                                 </h1>
                                             </div>
@@ -329,9 +329,9 @@ function Donate() {
                                                                 className="px-2 py-2 text-sm bg-white rounded-md shadow w-full"/>
                                                         </div>
                                                     </div>
-                                                    <div className="basis-1/3 flex flex-row px-4">
+                                                    <div className="basis-1/3 flex flex-row-reverse px-4">
                                                         <button onClick={handleAnonymousSubmit}
-                                                                className="bg-blue-600 rounded-md px-2 text-base text-white hover:bg-blue-700 my-4">
+                                                                className="bg-gradient-to-r from-sky-500 to-blue-500 rounded-md px-2 text-base text-white hover:bg-blue-700 my-4">
                                                             {t('DONATEANONYMOUSLY')}
                                                         </button>
                                                     </div>
@@ -518,13 +518,13 @@ function Donate() {
                                         <div className="flex flex-row -ml-0.5 -mb-0.5">
                                             <div className="basis-1/2">
                                             <button
-                                                    className="px-5 py-3 bg-blue-300 text-white font-bold rounded-bl-lg cursor-not-allowed">
+                                                    className="px-5 py-3 bg-cyan-300 text-white font-bold rounded-bl-lg cursor-not-allowed">
                                                     {t('BACK')}
                                                 </button>
                                             </div>
                                             <div className="basis-1/2 flex flex-row-reverse">
                                                 <button onClick={handleSubmit}
-                                                        className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-br-lg">
+                                                        className="px-5 py-3 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-br-lg">
                                                     {t('NEXT')}
                                                 </button>
                                             </div>
@@ -535,7 +535,7 @@ function Donate() {
                                 <div
                                     className="flex flex-col w-full h-fit bg-gray-50 shadow-2xl border-2 border-gray-100 rounded-t-2xl">
                                     <div className="flex flex-col w-full">
-                                        <div className="w-full bg-blue-600 rounded-t-2xl">
+                                        <div className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-t-2xl">
                                             <h1 className="text-2xl font-bold px-4 py-4 text-white">
                                                 {t('donatestep02')}
                                             </h1>
@@ -725,7 +725,7 @@ function Donate() {
                                                 <div className="flex flex-row -ml-1 -mb-1">
                                                     <div className="basis-1/2">
                                                         <button onClick={handleClick}
-                                                                className="px-5 py-3 bg-blue-600 text-white font-bold rounded-bl-lg hover:bg-blue-700">
+                                                                className="px-5 py-3 bg-sky-500 text-white font-bold rounded-bl-lg hover:bg-sky-600">
                                                             {t('BACK')}
                                                         </button>
                                                     </div>
@@ -984,15 +984,15 @@ function Donate() {
                                                 <div className="flex flex-row -ml-1 -mb-1">
                                                     <div className="basis-1/2">
                                                         <button onClick={handleClick2}
-                                                                className="px-5 py-3 bg-blue-600 text-white font-bold rounded-bl-lg hover:bg-blue-700">
-                                                            Back
+                                                                className="px-5 py-3 bg-sky-500 text-white font-bold rounded-bl-lg hover:bg-sky-600">
+                                                            BACK
                                                         </button>
                                                     </div>
                                                     <div className="basis-1/2 flex flex-row-reverse">
                                                         <button
                                                             onClick={handleNext2Submit}
                                                             className="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-br-lg">
-                                                            Donate
+                                                            DONATE
                                                         </button>
                                                     </div>
                                                 </div>
@@ -1007,20 +1007,20 @@ function Donate() {
                                     <div
                                         className="flex flex-col w-full h-fit bg-gray-50 shadow-2xl border-2 border-gray-100 rounded-2xl text-center">
                                         <div>
-                                            <h1 className="text-2xl font-bold px-4 py-4 bg-blue-700 rounded-t-2xl text-white">
+                                            <h1 className="text-2xl font-bold px-4 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-t-2xl text-white">
                                                 {t('donatestep03')}
                                             </h1>
                                         </div>
 
                                         <div className="flex flex-row items-center">
-                                            <div className="basis-3/10">
+                                            <div className="basis-1/5">
 
                                             </div>
-                                            <div className="flex flex-row basis-2/5">
-                                                <img src={congratulation} alt={congratulation}>
+                                            <div className="flex flex-row basis-3/5">
+                                                <img src={congratulation} alt={congratulation} className="w-full">
                                                 </img>
                                             </div>
-                                            <div className="basis-3/10">
+                                            <div className="basis-1/5">
 
                                             </div>
 
@@ -1041,7 +1041,7 @@ function Donate() {
 
                                         </div>
                                         <div>
-                                            <h1 className="text-2xl font-bold px-4 py-4 bg-blue-700 rounded-b-2xl text-white">
+                                            <h1 className="text-2xl font-bold px-4 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-b-2xl text-white">
                                                 {t('THANKYOU')}
                                             </h1>
                                         </div>

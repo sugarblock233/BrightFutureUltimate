@@ -37,16 +37,16 @@ function HomePage(){
                 <section className="pb-8 mt-10 md:mt-20">
                     <div className="flex flex-row ">
                         <div className="basis-3/5 flex flex-col">
-                            <h1 className="text-4xl font-bold leading-10 pb-4 md:w-4/5">
+                            <h1 className="text-4xl font-bold leading-10 pb-4 md:w-4/5 desktop:leading-relaxed">
                                 {t('HOMETITLE01')}
                             </h1>
-                            <p className="text-lg">
+                            <p className="text-lg desktop:leading-relaxed desktop:w-4/5">
                                 {t('HOMETEXT01')}
                             </p>
                         </div>
                         <div className="basis-2/5">
                             <img
-                                className="w-full"
+                                className="w-full xl:w-4/5 desktop:w-4/5"
                                 src={students}
                                 alt=""
                             />
