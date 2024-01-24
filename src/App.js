@@ -32,7 +32,16 @@ function App() {
                         href="https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap"
                         rel="stylesheet"
                     />
-
+                    {/* This section is a part of the navigation bar of the application.*/}
+                    {/* It is fixed at the top of the page and spans the full width.*/}
+                    {/* It contains several NavLink components, each representing a different page in the application.*/}
+                    {/* Each NavLink has a 'to' prop which is the URL path for that page.*/}
+                    {/* The 'className' prop is a function that returns a string of class names.*/}
+                    {/* The function takes an object with a single property 'isActive' which is true if the current URL matches the 'to' prop of the NavLink.*/}
+                    {/* If 'isActive' is true, the text color of the NavLink is 'text-sky-500', otherwise it is 'text-black'.*/}
+                    {/* If 'isActive' is true, a blue line is displayed under the NavLink.*/}
+                    {/* The last child of the div is a button for changing the language of the application.*/}
+                    {/* When the button is clicked, a list of languages is displayed and the user can select a language.*/}
                     <section className="fixed top-0 w-full z-10">
                         <div
                             className="flex flex-row place-items-center px-8 h-16 text-3lg font-sans shadow-md"
@@ -168,12 +177,19 @@ function App() {
                 <br></br>
                 {/*route根据目前的url渲染子route*/}
                 {/*route renders sub-route based on the current url*/}
+                {/* The Routes component from 'react-router-dom' is used to define the different routes of the application.*/}
+                {/* Each Route component inside Routes represents a different page in the application.*/}
+                {/* The 'path' prop in the Route component is a string that represents the URL path for that route.*/}
+                {/* The 'element' prop is the component that will be rendered when the URL matches the 'path'.*/}
+                {/* Nested routes are also possible by placing Route components inside another Route component.*/}
                 <Routes>
+                    {/* Route for the home page. When the URL is "/", the HomePage component will be rendered. */}
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/admission" element={<Admission/>}/>
                     <Route path="/results" element={<Results/>}/>
                     {/*嵌套route*/}
                     {/*Nested routes*/}
+                    {/* Route for the about us page. When the URL is "/aboutus", the Aboutus component will be rendered. */}
                     <Route path="/aboutus" element={<Aboutus/>}>
                         <Route path="overall" element={<OverallContent/>}/>
                         <Route path="goal" element={<OurGoal/>}/>

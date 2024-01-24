@@ -9,9 +9,9 @@ import congratulation from "./images/congratulation.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import visa from "./images/paymenticons/visa.svg";
+import visa from "./images/paymenticons/visavisa.svg";
 import alipay from "./images/paymenticons/alipay.svg";
-import mastercard from "./images/paymenticons/mastercard.svg";
+import mastercard from "./images/paymenticons/mastercardmaster.svg";
 import jcb from "./images/paymenticons/jcb.svg";
 import unionpay from "./images/paymenticons/unionpay.svg";
 import diners from "./images/paymenticons/diners.svg";
@@ -21,22 +21,31 @@ import hipercard from "./images/paymenticons/hipercard.svg";
 import elo from "./images/paymenticons/elo.svg";
 import { useTranslation } from 'react-i18next';
 
+ // * The Donate function component is part of a React application.
+ // * It uses the react-i18next library for internationalization.
+ // * It contains several states and effects to handle the donation process.
+ // *
+ // * @function Donate
+ // * @returns {JSX.Element} Rendered component
 function Donate() {
     const { t} = useTranslation();
     // for the first step and second step
+    // State to control the visibility of the first and second steps in the donation process
     const [isFirstElementVisible, setIsFirstElementVisible] = useState(true);
 
+    // Function to toggle the visibility of the first and second steps in the donation process
     const handleClick = () => {
         setIsFirstElementVisible(!isFirstElementVisible);
     };
 
+    // State to control the visibility of the third step in the donation process
     // now I think out an idea that to use another state to control the third step - finish step
     const [isSecondElementVisible, setIsSecondElementVisible] = useState(true);
     const handleClick2 = () => {
         setIsSecondElementVisible(!isSecondElementVisible);
     }
 
-
+    // Function to toggle the visibility of the third step in the donation process
     const [selectedPayment, setSelectedPayment] = useState('credit');
 
     const [inputValue, setInputValue] = useState('');
@@ -47,6 +56,8 @@ function Donate() {
     const [isDropdownVisible2, setIsDropdownVisible2] = useState(false);
     const dropdownRef2 = useRef(null);
 
+
+    // Effect to handle clicks outside of the first dropdown.If a click is detected outside of the dropdown, it will be closed.
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -171,6 +182,10 @@ function Donate() {
         handleClick();
     };
 
+    // Handles the submission of the first next button.
+    // It checks if the firstName2, lastName2, cvv, and cardNumber fields are empty.
+    // If any of them are empty, it alerts the user and returns.
+    // If none of them are empty, it calls the handleClick2 function.
     const handleNext1Submit = () => {
         if (isEmpty(firstName2)) {
             alert('Firstname can not be empty!');
@@ -192,6 +207,10 @@ function Donate() {
         handleClick2();
     };
 
+    // Handles the submission of the second next button.
+    // It checks if the firstName3, lastName3, and cardNumber2 fields are empty.
+    // If any of them are empty, it alerts the user and returns.
+    // If none of them are empty, it calls the handleClick2 function.
     const handleNext2Submit = () => {
         if (isEmpty(firstName3)) {
             alert('Firstname can not be empty!');
@@ -209,8 +228,10 @@ function Donate() {
         handleClick2();
     };
 
-
-
+    // Handles the submission of the anonymous donation.
+    // It checks if the inputValue and inputValue2 fields are empty.
+    // If any of them are empty, it alerts the user and returns.
+    // If none of them are empty, it logs 'Next Page' to the console and calls the handleClick function.
     const handleAnonymousSubmit = () => {
         if (isEmpty(inputValue)){
             alert('Amount can not be empty!');

@@ -6,15 +6,31 @@ import CollapsibleCard from './CollapsibleCard';
 import { useTranslation } from 'react-i18next';
 
 function FAQ() {
+    // Importing the useTranslation hook from react-i18next for internationalization
     const { t} = useTranslation();
 
+    // Initializing the searchTerm state variable to an empty string
+    // setSearchTerm is the function that will be used to update the searchTerm state variable
     const [searchTerm, setSearchTerm] = useState('');
 
     // 更新搜索词的函数
+    /**
+     * This function is triggered when the value of the search input field changes.
+     * It updates the searchTerm state variable with the new value of the input field.
+     * The new value is converted to lowercase to make the search case-insensitive.
+     *
+     * @param {object} event - The event object that triggered the function call
+     */
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value.toLowerCase());
     };
 
+    /**
+     * This is the data for the FAQ cards.
+     * Each card is an object with a title and content.
+     * The title and content are internationalized strings.
+     * The key for the internationalized string is passed to the t function from react-i18next to get the string in the current language.
+     */
     const cardsData = [
         {
             title: t('faqtitle01'),
@@ -81,8 +97,12 @@ function FAQ() {
                                 </h1>
                             </div>
                         </div>
+                        {/*This section is responsible for the search functionality in the FAQ page.*/}
+                        {/*It includes an input field for the user to enter their search term and a list of collapsible cards that display the FAQ data.*/}
+                        {/*The list of cards is filtered based on the search term entered by the user.*/}
                         <div className="pt-8 pb-12">
                             <div className="flex flex-col justify-center w-full">
+                                {/* Input field for the search term. The 'onChange' prop is set to the 'handleSearchChange' function which updates the search term whenever the user types in the input field. */}
                                 <input
                                     type="text"
                                     className="py-2 px-2 border-2 border-gray-100 rounded-md w-full"
@@ -92,6 +112,21 @@ function FAQ() {
                                 />
                                 <hr></hr>
                                 <div className="mt-10">
+                                    {/*
+                                    * This section is responsible for rendering a list of collapsible cards that display the FAQ data.
+                                    * The 'filter' method is used to filter the cards based on the search term.
+                                    * The 'map' method is used to render each card.
+                                    *
+                                    * The 'filter' method takes a function as an argument which is called for each card in the 'cardsData' array.
+                                    * The function checks if the title or content of the card includes the search term.
+                                    * If the function returns true, the card is included in the new array returned by the 'filter' method.
+                                    * If the function returns false, the card is not included in the new array.
+                                    *
+                                    * The 'map' method takes a function as an argument which is called for each card in the array returned by the 'filter' method.
+                                    * The function returns a 'CollapsibleCard' component with the 'key', 'title', and 'content' props set to the corresponding properties of the card.
+                                    * The 'key' prop is a special prop in React that helps identify which items have changed, are added, or are removed.
+                                    * The 'title' and 'content' props are used by the 'CollapsibleCard' component to display the title and content of the card.
+                                    */}
                                     {cardsData.filter(card =>
                                         card.title.toLowerCase().includes(searchTerm) ||
                                         card.content.toLowerCase().includes(searchTerm)
