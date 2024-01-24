@@ -155,6 +155,9 @@ function App() {
                                         <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('en')}>English</button>
                                         <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('de')}>Deutsch</button>
                                         <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('zh')}>中文</button>
+                                        <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('ja')}>日本語</button>
+                                        <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('es')}>Español</button>
+                                        <button className="p-2 hover:bg-gray-100" onClick={() => i18n.changeLanguage('ru')}>Русский</button>
                                     </ul>
                                 </div>
                             </div>

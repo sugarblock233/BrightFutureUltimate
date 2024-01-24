@@ -10,6 +10,10 @@ import { initReactI18next } from "react-i18next";
 import enTranslation from './translations/en.json';
 import zhTranslation from './translations/zh.json';
 import deTranslation from './translations/de.json';
+import jaTranslation from './translations/ja.json';
+import esTranslation from './translations/es.json';
+import ruTranslation from './translations/ru.json';
+
 
 // i18next配置
 i18n
@@ -25,6 +29,15 @@ i18n
             de: {
                 translation: deTranslation
             },
+            ja: {
+                translation: jaTranslation
+            },
+            es: {
+                translation: esTranslation
+            },
+            ru: {
+                translation: ruTranslation
+            }
         },
         lng: "en",
         fallbackLng: "en",
